@@ -20,19 +20,19 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::resource('articles', ArticleController::class);
+// Route::resource('articles', ArticleController::class);
 
-// // List articles
-// Route::get('articles', [ArticleController::class, 'index']);
+// List articles
+Route::get('articles', [ArticleController::class, 'index']);
 
-// // List single article
-// Route::get('article/{id}', [ArticleController::class, 'show']);
+// List single article
+Route::get('article/{id}', [ArticleController::class, 'show']);
 
-// // Create new article
-// Route::post('article', [ArticleController::class, 'store']);
+// Create new article
+Route::post('article', [ArticleController::class, 'store']);
 
-// // Update article
-// Route::put('article', [ArticleController::class, 'update']);
+// Update article
+Route::put('article', [ArticleController::class, 'store']);
 
-// // Delete article
-// Route::delete('article/{id}', [ArticleController::class, 'destroy']);
+// Delete article
+Route::delete('article/{id}', [ArticleController::class, 'destroy']);
